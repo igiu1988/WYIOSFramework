@@ -1,5 +1,5 @@
 //
-//  OMBaseNavigationController.h
+//  WYBaseNavigationController.h
 //  OrderMeal
 //
 //  Created by wangyang on 13-6-8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OMBaseNavigationController : UINavigationController
+@interface WYBaseNavigationController : UINavigationController
 
 @end

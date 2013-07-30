@@ -1,19 +1,19 @@
 //
-//  OMBaseNavigationController.m
+//  WYBaseNavigationController.m
 //  OrderMeal
 //
 //  Created by wangyang on 13-6-8.
 //  Copyright (c) 2013年 forsoft. All rights reserved.
 //
 
-#import "OMBaseNavigationController.h"
+#import "WYBaseNavigationController.h"
 #import "DeviceCommon.h"
 
-@interface OMBaseNavigationController ()
+@interface WYBaseNavigationController ()
 
 @end
 
-@implementation OMBaseNavigationController
+@implementation WYBaseNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
