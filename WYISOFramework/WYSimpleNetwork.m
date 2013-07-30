@@ -55,6 +55,7 @@
 }
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    NSLog(@"连接出现错误 %@", [error localizedDescription]);
     _connectionCompeleteBlock(nil, connection, error);
 }
 

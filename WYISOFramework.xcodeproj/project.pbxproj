@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3571A4E17A7776D00F67E93 /* UIImage+PureColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3571A4D17A7776D00F67E93 /* UIImage+PureColorImage.m */; };
+		D3571A5217A778B300F67E93 /* WYSimpleNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D3571A5117A778B300F67E93 /* WYSimpleNetwork.m */; };
 		D36185D217A764AF007E01C6 /* Navigation_Shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D36185D117A764AF007E01C6 /* Navigation_Shadow.png */; };
 		D383BA7F1783ECC500B05AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA7E1783ECC500B05AA6 /* UIKit.framework */; };
 		D383BA811783ECC500B05AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA801783ECC500B05AA6 /* Foundation.framework */; };
@@ -39,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3571A4C17A7776D00F67E93 /* UIImage+PureColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColorImage.h"; sourceTree = "<group>"; };
+		D3571A4D17A7776D00F67E93 /* UIImage+PureColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColorImage.m"; sourceTree = "<group>"; };
+		D3571A5017A778B300F67E93 /* WYSimpleNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYSimpleNetwork.h; sourceTree = "<group>"; };
+		D3571A5117A778B300F67E93 /* WYSimpleNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYSimpleNetwork.m; sourceTree = "<group>"; };
 		D36185D117A764AF007E01C6 /* Navigation_Shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navigation_Shadow.png; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3571A4F17A778A300F67E93 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D3571A5017A778B300F67E93 /* WYSimpleNetwork.h */,
+				D3571A5117A778B300F67E93 /* WYSimpleNetwork.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +154,7 @@
 		D383BA841783ECC500B05AA6 /* WYISOFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D3571A4F17A778A300F67E93 /* Networking */,
 				D3BABDB91796736F00E50DF9 /* Table View */,
 				D383BAC91783F23400B05AA6 /* Image Downloader */,
 				D383BAC51783F1D600B05AA6 /* HUD */,
@@ -224,6 +240,8 @@
 		D383BABA1783F10B00B05AA6 /* UIImage Category */ = {
 			isa = PBXGroup;
 			children = (
+				D3571A4C17A7776D00F67E93 /* UIImage+PureColorImage.h */,
+				D3571A4D17A7776D00F67E93 /* UIImage+PureColorImage.m */,
 				D383BABB1783F11C00B05AA6 /* UIImage+ResolutionIndependent.h */,
 				D383BABC1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m */,
 			);
@@ -359,6 +377,8 @@
 				D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */,
 				D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */,
 				D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */,
+				D3571A4E17A7776D00F67E93 /* UIImage+PureColorImage.m in Sources */,
+				D3571A5217A778B300F67E93 /* WYSimpleNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
