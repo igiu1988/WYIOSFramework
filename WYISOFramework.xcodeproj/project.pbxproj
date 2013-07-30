@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D36185D217A764AF007E01C6 /* Navigation_Shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D36185D117A764AF007E01C6 /* Navigation_Shadow.png */; };
 		D383BA7F1783ECC500B05AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA7E1783ECC500B05AA6 /* UIKit.framework */; };
 		D383BA811783ECC500B05AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA801783ECC500B05AA6 /* Foundation.framework */; };
 		D383BA831783ECC500B05AA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA821783ECC500B05AA6 /* CoreGraphics.framework */; };
@@ -23,7 +24,7 @@
 		D383BAAD1783EE2600B05AA6 /* NSString+CryptonExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAAC1783EE2600B05AA6 /* NSString+CryptonExtension.m */; };
 		D383BAB11783EEC800B05AA6 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAB01783EEC800B05AA6 /* NSData+AES256.m */; };
 		D383BAB41783EF6C00B05AA6 /* NSString+TimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAB31783EF6C00B05AA6 /* NSString+TimeInterval.m */; };
-		D383BAB91783F0A900B05AA6 /* OMBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAB81783F0A900B05AA6 /* OMBaseNavigationController.m */; };
+		D383BAB91783F0A900B05AA6 /* WYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAB81783F0A900B05AA6 /* WYBaseNavigationController.m */; };
 		D383BABD1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BABC1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m */; };
 		D383BAC41783F18500B05AA6 /* WYCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAC31783F18500B05AA6 /* WYCoreDataManager.m */; };
 		D383BAC81783F1E200B05AA6 /* OMShowHud.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAC71783F1E200B05AA6 /* OMShowHud.m */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D36185D117A764AF007E01C6 /* Navigation_Shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navigation_Shadow.png; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D383BA801783ECC500B05AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +65,8 @@
 		D383BAB01783EEC800B05AA6 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
 		D383BAB21783EF6C00B05AA6 /* NSString+TimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TimeInterval.h"; sourceTree = "<group>"; };
 		D383BAB31783EF6C00B05AA6 /* NSString+TimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TimeInterval.m"; sourceTree = "<group>"; };
-		D383BAB71783F0A900B05AA6 /* OMBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMBaseNavigationController.h; sourceTree = "<group>"; };
-		D383BAB81783F0A900B05AA6 /* OMBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMBaseNavigationController.m; sourceTree = "<group>"; };
+		D383BAB71783F0A900B05AA6 /* WYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseNavigationController.h; sourceTree = "<group>"; };
+		D383BAB81783F0A900B05AA6 /* WYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseNavigationController.m; sourceTree = "<group>"; };
 		D383BABB1783F11C00B05AA6 /* UIImage+ResolutionIndependent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResolutionIndependent.h"; sourceTree = "<group>"; };
 		D383BABC1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResolutionIndependent.m"; sourceTree = "<group>"; };
 		D383BAC21783F18500B05AA6 /* WYCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCoreDataManager.h; sourceTree = "<group>"; };
@@ -212,8 +214,9 @@
 		D383BAB61783F08F00B05AA6 /* Navigation Subclass */ = {
 			isa = PBXGroup;
 			children = (
-				D383BAB71783F0A900B05AA6 /* OMBaseNavigationController.h */,
-				D383BAB81783F0A900B05AA6 /* OMBaseNavigationController.m */,
+				D383BAB71783F0A900B05AA6 /* WYBaseNavigationController.h */,
+				D383BAB81783F0A900B05AA6 /* WYBaseNavigationController.m */,
+				D36185D117A764AF007E01C6 /* Navigation_Shadow.png */,
 			);
 			name = "Navigation Subclass";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				D383BA981783ECC600B05AA6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D383BA9B1783ECC600B05AA6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D383BAD31783F2D500B05AA6 /* SVProgressHUD.bundle in Resources */,
+				D36185D217A764AF007E01C6 /* Navigation_Shadow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +350,7 @@
 				D383BAAD1783EE2600B05AA6 /* NSString+CryptonExtension.m in Sources */,
 				D383BAB11783EEC800B05AA6 /* NSData+AES256.m in Sources */,
 				D383BAB41783EF6C00B05AA6 /* NSString+TimeInterval.m in Sources */,
-				D383BAB91783F0A900B05AA6 /* OMBaseNavigationController.m in Sources */,
+				D383BAB91783F0A900B05AA6 /* WYBaseNavigationController.m in Sources */,
 				D383BABD1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m in Sources */,
 				D383BAC41783F18500B05AA6 /* WYCoreDataManager.m in Sources */,
 				D383BAC81783F1E200B05AA6 /* OMShowHud.m in Sources */,
