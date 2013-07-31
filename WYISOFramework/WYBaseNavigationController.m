@@ -33,9 +33,11 @@
     
     
     // 全局设置 backButton 的图片，至少要有这两句话，要不然至少会在ios5上不生效
-    // back button的大小(@1x情况下)应该是50x30
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"Back_Button"] resizableImageWithCapInsets:UIEdgeInsetsZero] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"Back_Button"] resizableImageWithCapInsets:UIEdgeInsetsZero] forState:UIControlStateNormal barMetrics:UIBarMetricsLandscapePhone];
+    // back button的大小无所谓，关键是如何针对不同图片使用不同UIEdgeInsets, UIEdgeInsets的说明自己看文档
+    // 对于当前的sample使用的后退图片效果是希望是所有后退按键都是50x30大小，比如只是一个后退的箭头。那么UIEdgeInsets就设置成如下样式
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 50, 0, 0);
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"Back_Button"] resizableImageWithCapInsets:insets] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"Back_Button"] resizableImageWithCapInsets:insets] forState:UIControlStateNormal barMetrics:UIBarMetricsLandscapePhone];
     
     // 隐藏系统的 back button 标题，
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 44*2) forBarMetrics:UIBarMetricsDefault];
