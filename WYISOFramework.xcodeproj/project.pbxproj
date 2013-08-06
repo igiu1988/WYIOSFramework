@@ -38,6 +38,10 @@
 		D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBB1796749400E50DF9 /* WYTableViewDataSource.m */; };
 		D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBE179675E300E50DF9 /* WYTableView.m */; };
 		D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */; };
+		D3EA9B5F17AB8484007538D6 /* backButon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5B17AB8484007538D6 /* backButon.png */; };
+		D3EA9B6017AB8484007538D6 /* backButon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5C17AB8484007538D6 /* backButon@2x.png */; };
+		D3EA9B6117AB8484007538D6 /* backButonPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5D17AB8484007538D6 /* backButonPress.png */; };
+		D3EA9B6217AB8484007538D6 /* backButonPress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5E17AB8484007538D6 /* backButonPress@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 		D3BABDBE179675E300E50DF9 /* WYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableView.m; sourceTree = "<group>"; };
 		D3BABDC017967C8C00E50DF9 /* WYTableViewTestControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableViewTestControllerViewController.h; sourceTree = "<group>"; };
 		D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewTestControllerViewController.m; sourceTree = "<group>"; };
+		D3EA9B5B17AB8484007538D6 /* backButon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButon.png; sourceTree = "<group>"; };
+		D3EA9B5C17AB8484007538D6 /* backButon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButon@2x.png"; sourceTree = "<group>"; };
+		D3EA9B5D17AB8484007538D6 /* backButonPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButonPress.png; sourceTree = "<group>"; };
+		D3EA9B5E17AB8484007538D6 /* backButonPress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButonPress@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +238,10 @@
 		D383BAB61783F08F00B05AA6 /* Navigation Subclass */ = {
 			isa = PBXGroup;
 			children = (
+				D3EA9B5B17AB8484007538D6 /* backButon.png */,
+				D3EA9B5C17AB8484007538D6 /* backButon@2x.png */,
+				D3EA9B5D17AB8484007538D6 /* backButonPress.png */,
+				D3EA9B5E17AB8484007538D6 /* backButonPress@2x.png */,
 				D383BAB71783F0A900B05AA6 /* WYBaseNavigationController.h */,
 				D383BAB81783F0A900B05AA6 /* WYBaseNavigationController.m */,
 				D36185D117A764AF007E01C6 /* Navigation_Shadow.png */,
@@ -351,6 +363,10 @@
 				D383BA9B1783ECC600B05AA6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D383BAD31783F2D500B05AA6 /* SVProgressHUD.bundle in Resources */,
 				D36185D217A764AF007E01C6 /* Navigation_Shadow.png in Resources */,
+				D3EA9B5F17AB8484007538D6 /* backButon.png in Resources */,
+				D3EA9B6017AB8484007538D6 /* backButon@2x.png in Resources */,
+				D3EA9B6117AB8484007538D6 /* backButonPress.png in Resources */,
+				D3EA9B6217AB8484007538D6 /* backButonPress@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
