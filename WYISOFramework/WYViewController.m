@@ -7,6 +7,7 @@
 //
 
 #import "WYViewController.h"
+#import "UIViewController+ObserverKeyboard.h"
 
 @interface WYViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self observeKeyboard];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +28,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Keyboard Show NOtification
 
 @end

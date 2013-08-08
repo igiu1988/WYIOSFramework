@@ -27,6 +27,18 @@
                                     <segue destination="txK-bA-LAv" kind="push" id="c5M-Gr-wUt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="UGS-gI-1ZV">
+                                <rect key="frame" x="128" y="299" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Tqz-AM-LRR">
+                                <rect key="frame" x="114" y="393" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -77,20 +89,6 @@
             <point key="canvasLocation" x="227" y="102"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="WYTableView" superclassName="UITableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WYTableView.h"/>
-        </class>
-        <class className="WYTableViewTestControllerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WYTableViewTestControllerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="testTableView" candidateClass="WYTableView"/>
-            </relationships>
-        </class>
-        <class className="WYViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WYViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

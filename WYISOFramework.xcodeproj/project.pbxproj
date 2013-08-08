@@ -35,9 +35,12 @@
 		D383BAD41783F2D500B05AA6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D383BAD21783F2D500B05AA6 /* SVProgressHUD.m */; };
 		D383BAD71783FE5100B05AA6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BAD61783FE5100B05AA6 /* CoreData.framework */; };
 		D383BAD91783FE6B00B05AA6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */; };
+		D3ACD66F17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACD66E17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m */; };
+		D3ACD67217B0E6A500D74640 /* UIResponder+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACD67117B0E6A500D74640 /* UIResponder+FirstResponder.m */; };
 		D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBB1796749400E50DF9 /* WYTableViewDataSource.m */; };
 		D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBE179675E300E50DF9 /* WYTableView.m */; };
 		D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */; };
+		D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E76D0217B3883100D318CA /* WYScrollView.m */; };
 		D3EA9B5F17AB8484007538D6 /* backButon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5B17AB8484007538D6 /* backButon.png */; };
 		D3EA9B6017AB8484007538D6 /* backButon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5C17AB8484007538D6 /* backButon@2x.png */; };
 		D3EA9B6117AB8484007538D6 /* backButonPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5D17AB8484007538D6 /* backButonPress.png */; };
@@ -91,12 +94,18 @@
 		D383BAD51783FD0600B05AA6 /* DeviceCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCommon.h; sourceTree = "<group>"; };
 		D383BAD61783FE5100B05AA6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D3ACD66D17B0DE5700D74640 /* UIViewController+ObserverKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ObserverKeyboard.h"; sourceTree = "<group>"; };
+		D3ACD66E17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ObserverKeyboard.m"; sourceTree = "<group>"; };
+		D3ACD67017B0E6A500D74640 /* UIResponder+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+FirstResponder.h"; path = "../UIResponder+FirstResponder.h"; sourceTree = "<group>"; };
+		D3ACD67117B0E6A500D74640 /* UIResponder+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+FirstResponder.m"; path = "../UIResponder+FirstResponder.m"; sourceTree = "<group>"; };
 		D3BABDBA1796749400E50DF9 /* WYTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableViewDataSource.h; sourceTree = "<group>"; };
 		D3BABDBB1796749400E50DF9 /* WYTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewDataSource.m; sourceTree = "<group>"; };
 		D3BABDBD179675E300E50DF9 /* WYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableView.h; sourceTree = "<group>"; };
 		D3BABDBE179675E300E50DF9 /* WYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableView.m; sourceTree = "<group>"; };
 		D3BABDC017967C8C00E50DF9 /* WYTableViewTestControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableViewTestControllerViewController.h; sourceTree = "<group>"; };
 		D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewTestControllerViewController.m; sourceTree = "<group>"; };
+		D3E76D0117B3883100D318CA /* WYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYScrollView.h; sourceTree = "<group>"; };
+		D3E76D0217B3883100D318CA /* WYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScrollView.m; sourceTree = "<group>"; };
 		D3EA9B5B17AB8484007538D6 /* backButon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButon.png; sourceTree = "<group>"; };
 		D3EA9B5C17AB8484007538D6 /* backButon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButon@2x.png"; sourceTree = "<group>"; };
 		D3EA9B5D17AB8484007538D6 /* backButonPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButonPress.png; sourceTree = "<group>"; };
@@ -162,6 +171,8 @@
 		D383BA841783ECC500B05AA6 /* WYISOFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D3E76D0417B3883600D318CA /* ScrollView */,
+				D3E76CFE17B1ECF600D318CA /* FirstResponder */,
 				D3571A4F17A778A300F67E93 /* Networking */,
 				D3BABDB91796736F00E50DF9 /* Table View */,
 				D383BAC91783F23400B05AA6 /* Image Downloader */,
@@ -231,6 +242,8 @@
 				D383BA991783ECC600B05AA6 /* MainStoryboard_iPad.storyboard */,
 				D383BA9C1783ECC600B05AA6 /* WYViewController.h */,
 				D383BA9D1783ECC600B05AA6 /* WYViewController.m */,
+				D3ACD66D17B0DE5700D74640 /* UIViewController+ObserverKeyboard.h */,
+				D3ACD66E17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m */,
 			);
 			name = "Original Source";
 			sourceTree = "<group>";
@@ -301,6 +314,24 @@
 				D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */,
 			);
 			name = "Table View";
+			sourceTree = "<group>";
+		};
+		D3E76CFE17B1ECF600D318CA /* FirstResponder */ = {
+			isa = PBXGroup;
+			children = (
+				D3ACD67017B0E6A500D74640 /* UIResponder+FirstResponder.h */,
+				D3ACD67117B0E6A500D74640 /* UIResponder+FirstResponder.m */,
+			);
+			name = FirstResponder;
+			sourceTree = "<group>";
+		};
+		D3E76D0417B3883600D318CA /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D3E76D0117B3883100D318CA /* WYScrollView.h */,
+				D3E76D0217B3883100D318CA /* WYScrollView.m */,
+			);
+			name = ScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +426,9 @@
 				D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */,
 				D3571A4E17A7776D00F67E93 /* UIImage+PureColorImage.m in Sources */,
 				D3571A5217A778B300F67E93 /* WYSimpleNetwork.m in Sources */,
+				D3ACD66F17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m in Sources */,
+				D3ACD67217B0E6A500D74640 /* UIResponder+FirstResponder.m in Sources */,
+				D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
