@@ -143,8 +143,6 @@
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
-				D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */,
-				D383BAD61783FE5100B05AA6 /* CoreData.framework */,
 				D383BAB51783EFA800B05AA6 /* Original Source */,
 				D383BA841783ECC500B05AA6 /* WYISOFramework */,
 				D383BA851783ECC500B05AA6 /* Supporting Files */,
@@ -164,6 +162,8 @@
 		D383BA7D1783ECC500B05AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */,
+				D383BAD61783FE5100B05AA6 /* CoreData.framework */,
 				D383BA7E1783ECC500B05AA6 /* UIKit.framework */,
 				D383BA801783ECC500B05AA6 /* Foundation.framework */,
 				D383BA821783ECC500B05AA6 /* CoreGraphics.framework */,
