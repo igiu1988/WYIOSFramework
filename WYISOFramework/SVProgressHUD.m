@@ -184,7 +184,7 @@ CGFloat SVProgressHUDRingThickness = 6;
             
             size_t locationsCount = 2;
             CGFloat locations[2] = {0.0f, 1.0f};
-            CGFloat colors[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.75f}; 
+            CGFloat colors[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.75f};
             CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
             CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, colors, locations, locationsCount);
             CGColorSpaceRelease(colorSpace);
@@ -198,54 +198,63 @@ CGFloat SVProgressHUDRingThickness = 6;
         }
     }
 }
-
-- (void)updatePosition {
-	
-    CGFloat hudWidth = 100;
-    CGFloat hudHeight = 100;
+/**
+ *	HUD 最多有图片和文字
+ *  图片：自己的高 + 上下边距各 5，左右各留5
+ *  文字：自己的高 + 下边距 5，左右各留5
+ */
+- (void)updatePosition{
+    CGFloat itemMargin = 15;
+    CGFloat hudWidth = 0;
+    CGFloat hudHeight = 0;
     CGFloat stringWidth = 0;
     CGFloat stringHeight = 0;
     CGRect labelRect = CGRectZero;
+    CGRect imageBounds = self.imageView.bounds;
+    
     
     NSString *string = self.stringLabel.text;
     // False if it's text-only
     BOOL imageUsed = (self.imageView.image) || (self.imageView.hidden);
     
     if(string) {
+        // 首先要看文字的长宽，Hud 的大小取决于这个
         CGSize stringSize = [string sizeWithFont:self.stringLabel.font constrainedToSize:CGSizeMake(200, 300)];
         stringWidth = stringSize.width;
         stringHeight = stringSize.height;
-        if (imageUsed)
-            hudHeight = 80+stringHeight;
-        else
-            hudHeight = 20+stringHeight;
-        
-        if(stringWidth > hudWidth)
-            hudWidth = ceil(stringWidth/2)*2;
-        
-        CGFloat labelRectY = imageUsed ? 66 : 9;
-        
-        if(hudHeight > 100) {
-            labelRect = CGRectMake(12, labelRectY, hudWidth, stringHeight);
-            hudWidth+=24;
-        } else {
-            hudWidth+=24;
-            labelRect = CGRectMake(0, labelRectY, hudWidth, stringHeight);
-        }
     }
+    
+    // 联合上是否有图片，计算 Hud 的高度
+    if (imageUsed)
+        hudHeight = imageBounds.size.height + stringHeight + 3 * itemMargin;
+    else
+        hudHeight = 2 * itemMargin + stringHeight;
+    
+    // 计算 Hud 的宽度
+    hudWidth =  ceil(stringWidth/2)*2 + 2 * itemMargin;
+    
+    // 计算一下 stringLabel 的坐标
+    labelRect = self.stringLabel.frame;
+    labelRect.size.width = 300;
+    labelRect.origin.x = itemMargin;
+    labelRect.origin.y = imageUsed ? (imageBounds.size.height + 2 * itemMargin ): itemMargin;
+    self.stringLabel.frame = labelRect;
+    self.stringLabel.hidden = NO;
+    // 让 stringLabel 自适应 string 大小
+    [self.stringLabel sizeToFit];
+    
+    // 计算 hudView 的 bounds
+    self.hudView.bounds = CGRectMake(0, 0, hudWidth, hudHeight);
 	
-	self.hudView.bounds = CGRectMake(0, 0, hudWidth, hudHeight);
-	
+    // 图片位置计算
     if(string)
-        self.imageView.center = CGPointMake(CGRectGetWidth(self.hudView.bounds)/2, 36);
+        self.imageView.center = CGPointMake(CGRectGetWidth(self.hudView.bounds)/2, itemMargin + imageBounds.size.height/2);
 	else
        	self.imageView.center = CGPointMake(CGRectGetWidth(self.hudView.bounds)/2, CGRectGetHeight(self.hudView.bounds)/2);
 	
-	self.stringLabel.hidden = NO;
-	self.stringLabel.frame = labelRect;
-	
+    // 其它的一些计算，暂未添加注释
 	if(string) {
-		self.spinnerView.center = CGPointMake(ceil(CGRectGetWidth(self.hudView.bounds)/2)+0.5, 40.5);
+		self.spinnerView.center = CGPointMake(ceil(CGRectGetWidth(self.hudView.bounds)/2)+0.5, itemMargin + self.spinnerView.bounds.size.height/2);
         
         if(self.progress != -1)
             self.backgroundRingLayer.position = self.ringLayer.position = CGPointMake((CGRectGetWidth(self.hudView.bounds)/2), 36);
@@ -258,6 +267,7 @@ CGFloat SVProgressHUDRingThickness = 6;
     }
     
 }
+
 
 - (void)setStatus:(NSString *)string {
     
@@ -277,28 +287,28 @@ CGFloat SVProgressHUDRingThickness = 6;
 
 
 - (void)registerNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(positionHUD:) 
-                                                 name:UIApplicationDidChangeStatusBarOrientationNotification 
-                                               object:nil];  
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
+                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
+                                               object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(positionHUD:) 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(positionHUD:) 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
                                                  name:UIKeyboardDidHideNotification
                                                object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(positionHUD:) 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(positionHUD:) 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
 }
@@ -352,9 +362,9 @@ CGFloat SVProgressHUDRingThickness = 6;
     CGPoint newCenter;
     CGFloat rotateAngle;
     
-    switch (orientation) { 
+    switch (orientation) {
         case UIInterfaceOrientationPortraitUpsideDown:
-            rotateAngle = M_PI; 
+            rotateAngle = M_PI;
             newCenter = CGPointMake(posX, orientationFrame.size.height-posY);
             break;
         case UIInterfaceOrientationLandscapeLeft:
@@ -369,17 +379,17 @@ CGFloat SVProgressHUDRingThickness = 6;
             rotateAngle = 0.0;
             newCenter = CGPointMake(posX, posY);
             break;
-    } 
+    }
     
     if(notification) {
         SVProgressHUD *__weak weakSelf=self;
-        [UIView animateWithDuration:animationDuration 
-                              delay:0 
-                            options:UIViewAnimationOptionAllowUserInteraction 
+        [UIView animateWithDuration:animationDuration
+                              delay:0
+                            options:UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              [weakSelf moveToPoint:newCenter rotateAngle:rotateAngle];
                          } completion:NULL];
-    } 
+    }
     
     else {
         [self moveToPoint:newCenter rotateAngle:rotateAngle];
@@ -388,7 +398,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 - (void)moveToPoint:(CGPoint)newCenter rotateAngle:(CGFloat)angle {
-    self.hudView.transform = CGAffineTransformMakeRotation(angle); 
+    self.hudView.transform = CGAffineTransformMakeRotation(angle);
     self.hudView.center = newCenter;
 }
 
@@ -446,7 +456,7 @@ CGFloat SVProgressHUDRingThickness = 6;
         self.hudView.accessibilityLabel = string;
         self.hudView.isAccessibilityElement = YES;
     }
-
+    
     [self.overlayView setHidden:NO];
     [self positionHUD:nil];
     
@@ -491,7 +501,7 @@ CGFloat SVProgressHUDRingThickness = 6;
         self.hudView.accessibilityLabel = string;
         self.hudView.isAccessibilityElement = YES;
     }
-
+    
     UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, string);
     
@@ -506,7 +516,7 @@ CGFloat SVProgressHUDRingThickness = 6;
                                                       userInfo:notificationUserInfo];
     
     self.activityCount = 0;
-     SVProgressHUD *__weak weakSelf=self;
+    SVProgressHUD *__weak weakSelf=self;
     [UIView animateWithDuration:0.15
                           delay:0
                         options:UIViewAnimationCurveEaseIn | UIViewAnimationOptionAllowUserInteraction
@@ -523,9 +533,9 @@ CGFloat SVProgressHUDRingThickness = 6;
                              
                              [overlayView removeFromSuperview];
                              overlayView = nil;
-
+                             
                              UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
-
+                             
                              [[NSNotificationCenter defaultCenter] postNotificationName:SVProgressHUDDidDisappearNotification
                                                                                  object:nil
                                                                                userInfo:notificationUserInfo];
@@ -655,7 +665,7 @@ CGFloat SVProgressHUDRingThickness = 6;
         
         // UIAppearance is used when iOS >= 5.0
 		hudView.backgroundColor = self.hudBackgroundColor;
-
+        
         hudView.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin |
                                     UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin);
         
@@ -669,18 +679,18 @@ CGFloat SVProgressHUDRingThickness = 6;
         stringLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		stringLabel.backgroundColor = [UIColor clearColor];
 		stringLabel.adjustsFontSizeToFitWidth = YES;
-		#if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
-			stringLabel.textAlignment = UITextAlignmentCenter;
-		#else
-			stringLabel.textAlignment = NSTextAlignmentCenter;
-		#endif
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
+        stringLabel.textAlignment = UITextAlignmentCenter;
+#else
+        stringLabel.textAlignment = NSTextAlignmentCenter;
+#endif
 		stringLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-
+        
         // UIAppearance is used when iOS >= 5.0
 		stringLabel.textColor = self.hudForegroundColor;
 		stringLabel.font = self.hudFont;
 		stringLabel.shadowColor = self.hudStatusShadowColor;
-
+        
 		stringLabel.shadowOffset = CGSizeMake(0, -1);
         stringLabel.numberOfLines = 0;
     }
@@ -718,7 +728,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 - (CGFloat)visibleKeyboardHeight {
-        
+    
     UIWindow *keyboardWindow = nil;
     for (UIWindow *testWindow in [[UIApplication sharedApplication] windows]) {
         if(![[testWindow class] isEqual:[UIWindow class]]) {
@@ -775,7 +785,7 @@ CGFloat SVProgressHUDRingThickness = 6;
         return _uiHudStatusShColor;
     }
 #endif
- 
+    
     return [UIColor blackColor];
 }
 
@@ -798,12 +808,12 @@ CGFloat SVProgressHUDRingThickness = 6;
     if(_uiHudSuccessImage == nil) {
         _uiHudSuccessImage = [[[self class] appearance] hudSuccessImage];
     }
-
+    
     if(_uiHudSuccessImage != nil) {
         return _uiHudSuccessImage;
     }
 #endif
-
+    
     return [UIImage imageNamed:@"SVProgressHUD.bundle/success.png"];
 }
 
@@ -812,12 +822,12 @@ CGFloat SVProgressHUDRingThickness = 6;
     if(_uiHudErrorImage == nil) {
         _uiHudErrorImage = [[[self class] appearance] hudErrorImage];
     }
-
+    
     if(_uiHudErrorImage != nil) {
         return _uiHudErrorImage;
     }
 #endif
-
+    
     return [UIImage imageNamed:@"SVProgressHUD.bundle/error.png"];
 }
 

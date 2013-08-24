@@ -41,6 +41,7 @@
 		D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBE179675E300E50DF9 /* WYTableView.m */; };
 		D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */; };
 		D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E76D0217B3883100D318CA /* WYScrollView.m */; };
+		D3E76D0C17B4DDBF00D318CA /* WYMutitleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E76D0B17B4DDBF00D318CA /* WYMutitleTitleView.m */; };
 		D3EA9B5F17AB8484007538D6 /* backButon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5B17AB8484007538D6 /* backButon.png */; };
 		D3EA9B6017AB8484007538D6 /* backButon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5C17AB8484007538D6 /* backButon@2x.png */; };
 		D3EA9B6117AB8484007538D6 /* backButonPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5D17AB8484007538D6 /* backButonPress.png */; };
@@ -106,6 +107,8 @@
 		D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewTestControllerViewController.m; sourceTree = "<group>"; };
 		D3E76D0117B3883100D318CA /* WYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYScrollView.h; sourceTree = "<group>"; };
 		D3E76D0217B3883100D318CA /* WYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScrollView.m; sourceTree = "<group>"; };
+		D3E76D0A17B4DDBF00D318CA /* WYMutitleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMutitleTitleView.h; sourceTree = "<group>"; };
+		D3E76D0B17B4DDBF00D318CA /* WYMutitleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMutitleTitleView.m; sourceTree = "<group>"; };
 		D3EA9B5B17AB8484007538D6 /* backButon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButon.png; sourceTree = "<group>"; };
 		D3EA9B5C17AB8484007538D6 /* backButon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButon@2x.png"; sourceTree = "<group>"; };
 		D3EA9B5D17AB8484007538D6 /* backButonPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButonPress.png; sourceTree = "<group>"; };
@@ -140,8 +143,6 @@
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
-				D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */,
-				D383BAD61783FE5100B05AA6 /* CoreData.framework */,
 				D383BAB51783EFA800B05AA6 /* Original Source */,
 				D383BA841783ECC500B05AA6 /* WYISOFramework */,
 				D383BA851783ECC500B05AA6 /* Supporting Files */,
@@ -161,6 +162,8 @@
 		D383BA7D1783ECC500B05AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D383BAD81783FE6B00B05AA6 /* QuartzCore.framework */,
+				D383BAD61783FE5100B05AA6 /* CoreData.framework */,
 				D383BA7E1783ECC500B05AA6 /* UIKit.framework */,
 				D383BA801783ECC500B05AA6 /* Foundation.framework */,
 				D383BA821783ECC500B05AA6 /* CoreGraphics.framework */,
@@ -328,6 +331,8 @@
 		D3E76D0417B3883600D318CA /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				D3E76D0A17B4DDBF00D318CA /* WYMutitleTitleView.h */,
+				D3E76D0B17B4DDBF00D318CA /* WYMutitleTitleView.m */,
 				D3E76D0117B3883100D318CA /* WYScrollView.h */,
 				D3E76D0217B3883100D318CA /* WYScrollView.m */,
 			);
@@ -429,6 +434,7 @@
 				D3ACD66F17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m in Sources */,
 				D3ACD67217B0E6A500D74640 /* UIResponder+FirstResponder.m in Sources */,
 				D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */,
+				D3E76D0C17B4DDBF00D318CA /* WYMutitleTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
