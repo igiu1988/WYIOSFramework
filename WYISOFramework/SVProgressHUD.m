@@ -24,6 +24,10 @@ CGFloat SVProgressHUDRingRadius = 14;
 CGFloat SVProgressHUDRingThickness = 6;
 
 @interface SVProgressHUD ()
+/**
+ *	在 dismiss 时将会被置为 YES
+ */
+@property (readwrite, nonatomic, assign) BOOL displayImage;
 
 @property (nonatomic, readwrite) SVProgressHUDMaskType maskType;
 @property (nonatomic, strong, readonly) NSTimer *fadeOutTimer;
@@ -124,6 +128,13 @@ CGFloat SVProgressHUDRingThickness = 6;
     [[self sharedView] showProgress:progress status:status maskType:maskType];
 }
 
++ (void)showOnlyString:(NSString *)string
+{
+    [self sharedView].displayImage = NO;
+    [SVProgressHUD showWithStatus:string];
+}
+
+
 #pragma mark - Show then dismiss methods
 
 + (void)showSuccessWithStatus:(NSString *)string {
@@ -163,6 +174,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 		self.alpha = 0;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.activityCount = 0;
+        
     }
 	
     return self;
@@ -407,7 +419,6 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 #pragma mark - Master show/dismiss methods
-
 - (void)showProgress:(float)progress status:(NSString*)string maskType:(SVProgressHUDMaskType)hudMaskType {
     
     if(!self.overlayView.superview){
@@ -545,6 +556,9 @@ CGFloat SVProgressHUDRingThickness = 6;
                              //NSLog(@"keyWindow = %@", [UIApplication sharedApplication].keyWindow);
                          }
                      }];
+    
+    // 将 displayImage 置为 YES
+    self.displayImage = YES;
 }
 
 
@@ -702,6 +716,10 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 - (UIImageView *)imageView {
+    if (!_displayImage) {
+        return nil;
+    }
+    
     if (imageView == nil)
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 28, 28)];
     
@@ -712,6 +730,10 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 - (UIActivityIndicatorView *)spinnerView {
+    if (!_displayImage) {
+        return nil;
+    }
+
     if (spinnerView == nil) {
         spinnerView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 		spinnerView.hidesWhenStopped = YES;
