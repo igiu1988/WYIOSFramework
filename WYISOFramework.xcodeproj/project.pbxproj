@@ -57,6 +57,12 @@
 		D3571A4D17A7776D00F67E93 /* UIImage+PureColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColorImage.m"; sourceTree = "<group>"; };
 		D3571A5017A778B300F67E93 /* WYSimpleNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYSimpleNetwork.h; sourceTree = "<group>"; };
 		D3571A5117A778B300F67E93 /* WYSimpleNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYSimpleNetwork.m; sourceTree = "<group>"; };
+		D35A03DE17CC73CB00E3E41A /* UIImage+KTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KTCategory.h"; sourceTree = "<group>"; };
+		D35A03DF17CC73CB00E3E41A /* UIImage+KTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KTCategory.m"; sourceTree = "<group>"; };
+		D35A03E017CC73CB00E3E41A /* UIImage+ThumbnailsGenerater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ThumbnailsGenerater.h"; sourceTree = "<group>"; };
+		D35A03E117CC73CB00E3E41A /* UIImage+ThumbnailsGenerater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ThumbnailsGenerater.m"; sourceTree = "<group>"; };
+		D35A03E317CC73E500E3E41A /* NSFileManager+MostUsePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+MostUsePath.h"; sourceTree = "<group>"; };
+		D35A03E417CC73E500E3E41A /* NSFileManager+MostUsePath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+MostUsePath.m"; sourceTree = "<group>"; };
 		D36185D117A764AF007E01C6 /* Navigation_Shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navigation_Shadow.png; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +146,15 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		D35A03E217CC73D600E3E41A /* NSFileManager Category */ = {
+			isa = PBXGroup;
+			children = (
+				D35A03E317CC73E500E3E41A /* NSFileManager+MostUsePath.h */,
+				D35A03E417CC73E500E3E41A /* NSFileManager+MostUsePath.m */,
+			);
+			name = "NSFileManager Category";
+			sourceTree = "<group>";
+		};
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +189,7 @@
 		D383BA841783ECC500B05AA6 /* WYISOFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D35A03E217CC73D600E3E41A /* NSFileManager Category */,
 				D3E76D0417B3883600D318CA /* ScrollView */,
 				D3E76CFE17B1ECF600D318CA /* FirstResponder */,
 				D3571A4F17A778A300F67E93 /* Networking */,
@@ -268,6 +284,10 @@
 		D383BABA1783F10B00B05AA6 /* UIImage Category */ = {
 			isa = PBXGroup;
 			children = (
+				D35A03DE17CC73CB00E3E41A /* UIImage+KTCategory.h */,
+				D35A03DF17CC73CB00E3E41A /* UIImage+KTCategory.m */,
+				D35A03E017CC73CB00E3E41A /* UIImage+ThumbnailsGenerater.h */,
+				D35A03E117CC73CB00E3E41A /* UIImage+ThumbnailsGenerater.m */,
 				D3571A4C17A7776D00F67E93 /* UIImage+PureColorImage.h */,
 				D3571A4D17A7776D00F67E93 /* UIImage+PureColorImage.m */,
 				D383BABB1783F11C00B05AA6 /* UIImage+ResolutionIndependent.h */,
