@@ -26,9 +26,9 @@ typedef enum _WYHudType
 @interface WYHud : NSObject
 
 /**
-    调用该方法显示hud提示信息，并指定hud显示的时间
-    @param message 要显示的提示信息
-    @param type hud提示的类型
+ 调用该方法显示hud提示信息，并指定hud显示的时间
+ @param message 要显示的提示信息
+ @param type hud提示的类型
  */
 + (void)hudMessage:(NSString *)message type:(WYHudType)type;
 
