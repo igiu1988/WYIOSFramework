@@ -10,7 +10,7 @@
 #define WYISOFramework_DeviceCommon_h
 
 #define iOS6OrLater                     ([UIDevice currentDevice].systemVersion.floatValue >=6.0 ? YES : NO)
-
+#define iOS7OrLater                     ([UIDevice currentDevice].systemVersion.floatValue >=7.0 ? YES : NO)
 #define isIPhone                        ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
 #define isIPad                          ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
 
@@ -34,5 +34,7 @@ CGSizeEqualToSize(CGSizeMake(1536, 2048), [[UIScreen mainScreen] currentMode].si
 #define UI_DEVICE_HEIGHT                ([[UIScreen mainScreen] bounds].size.height)
 #define UI_SCREEN_WIDTH                 ([[UIScreen mainScreen] applicationFrame].size.width)
 #define UI_SCREEN_HEIGHT                ([[UIScreen mainScreen] applicationFrame].size.height)
+
+
 
 #endif

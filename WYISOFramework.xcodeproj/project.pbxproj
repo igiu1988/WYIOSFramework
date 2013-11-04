@@ -65,6 +65,7 @@
 		D35A03E317CC73E500E3E41A /* NSFileManager+MostUsePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+MostUsePath.h"; sourceTree = "<group>"; };
 		D35A03E417CC73E500E3E41A /* NSFileManager+MostUsePath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+MostUsePath.m"; sourceTree = "<group>"; };
 		D36185D117A764AF007E01C6 /* Navigation_Shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navigation_Shadow.png; sourceTree = "<group>"; };
+		D3637B3317D6DBE50071D79B /* shouldBeBlogged.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = shouldBeBlogged.rtf; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D383BA801783ECC500B05AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +162,7 @@
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
+				D3637B3317D6DBE50071D79B /* shouldBeBlogged.rtf */,
 				D383BAB51783EFA800B05AA6 /* Original Source */,
 				D383BA841783ECC500B05AA6 /* WYISOFramework */,
 				D383BA851783ECC500B05AA6 /* Supporting Files */,

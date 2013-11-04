@@ -19,29 +19,33 @@
 + (void)hudMessage:(NSString *)message type:(WYHudType)type
 {
     if (type == WYHudTypeOnlyText) {
-        
-        
         [SVProgressHUD showOnlyString:message];
     }else if (type == WYHudTypeSuccess){
+        [SVProgressHUD showSuccessWithStatus:message];
+    }else if (type == WYHudTypeError){
+        [SVProgressHUD showErrorWithStatus:message];
+    }else if (type == WYHudTypeWindow){
         
+    }else if (type == WYHudTypeLoading){
+        [SVProgressHUD showWithStatus:message];
     }
     
     
-//    double delayInSeconds = duration;
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//        [SVProgressHUD dismiss];
-//    });
+    //    double delayInSeconds = duration;
+    //    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    //    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    //        [SVProgressHUD dismiss];
+    //    });
 }
 
 + (void)ProgressHudMessage:(NSString *)message progress:(float)progress inView:(UIView *)view
 {
-
+    
 }
 
 
 + (void)dismiss
 {
-    
+    [SVProgressHUD dismiss];
 }
 @end
