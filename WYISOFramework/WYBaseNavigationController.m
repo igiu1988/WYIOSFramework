@@ -47,6 +47,11 @@
         
         // 设置navigation 背景。改这个背景，在 ios7里，默认的后退按键，标题都会跟着改颜色。在 ios6里还不了解情况
         [self.navigationBar setTintColor:[UIColor colorWithWhite:.5 alpha:1]];
+        
+        // 如果想要用自己的图片替换V型，可以设置图片的backIndicatorImage和backIndicatorTransitionMaskImage。如下代码所示：
+//        [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_btn.png"]];
+//        [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_btn.png"]];
+
     }
     
     // 隐藏系统的 back button 标题，
@@ -63,12 +68,11 @@
     
     
     // 自定义导航栏上 title 字体，不包括后退按键上的 title 字体
-    [[UINavigationBar appearance] setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
       [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8], UITextAttributeTextShadowColor,
       [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
       [UIColor colorWithRed:83.0/255 green:79.0/255 blue:78.0/255 alpha:1.0], UITextAttributeTextColor,
-      //      [UIFont fontWithName:@"HelveticaNeue" size:22.0], UITextAttributeFont,
+      [UIFont fontWithName:@"HelveticaNeue" size:22.0], UITextAttributeFont,
       nil]];
     
     // 自定义后退按键上 title 字体，不包括导航样栏 titile 字体
