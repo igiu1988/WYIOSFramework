@@ -14,6 +14,8 @@
 		D3571A5217A778B300F67E93 /* WYSimpleNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D3571A5117A778B300F67E93 /* WYSimpleNetwork.m */; };
 		D36185D217A764AF007E01C6 /* Navigation_Shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D36185D117A764AF007E01C6 /* Navigation_Shadow.png */; };
 		D3702A81183068DB008D9555 /* WYMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3702A80183068DB008D9555 /* WYMath.m */; };
+		D37B964D18B19FF900623499 /* WYAlgorithmsCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = D37B964C18B19FF900623499 /* WYAlgorithmsCompare.m */; };
+		D37B964F18B1A0EC00623499 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D37B964E18B1A0EC00623499 /* README.md */; };
 		D383BA7F1783ECC500B05AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA7E1783ECC500B05AA6 /* UIKit.framework */; };
 		D383BA811783ECC500B05AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA801783ECC500B05AA6 /* Foundation.framework */; };
 		D383BA831783ECC500B05AA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA821783ECC500B05AA6 /* CoreGraphics.framework */; };
@@ -45,6 +47,7 @@
 		D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */; };
 		D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E76D0217B3883100D318CA /* WYScrollView.m */; };
 		D3E76D0C17B4DDBF00D318CA /* WYMutitleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E76D0B17B4DDBF00D318CA /* WYMutitleTitleView.m */; };
+		D3E99DA118B6DAFA00034FB3 /* WYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E99DA018B6DAFA00034FB3 /* WYTabBarViewController.m */; };
 		D3EA9B5F17AB8484007538D6 /* backButon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5B17AB8484007538D6 /* backButon.png */; };
 		D3EA9B6017AB8484007538D6 /* backButon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5C17AB8484007538D6 /* backButon@2x.png */; };
 		D3EA9B6117AB8484007538D6 /* backButonPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EA9B5D17AB8484007538D6 /* backButonPress.png */; };
@@ -73,6 +76,9 @@
 		D3637B3317D6DBE50071D79B /* shouldBeBlogged.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = shouldBeBlogged.rtf; sourceTree = "<group>"; };
 		D3702A7F183068DB008D9555 /* WYMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMath.h; sourceTree = "<group>"; };
 		D3702A80183068DB008D9555 /* WYMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMath.m; sourceTree = "<group>"; };
+		D37B964B18B19FF900623499 /* WYAlgorithmsCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAlgorithmsCompare.h; sourceTree = "<group>"; };
+		D37B964C18B19FF900623499 /* WYAlgorithmsCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAlgorithmsCompare.m; sourceTree = "<group>"; };
+		D37B964E18B1A0EC00623499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D383BA801783ECC500B05AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +133,8 @@
 		D3E76D0217B3883100D318CA /* WYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScrollView.m; sourceTree = "<group>"; };
 		D3E76D0A17B4DDBF00D318CA /* WYMutitleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMutitleTitleView.h; sourceTree = "<group>"; };
 		D3E76D0B17B4DDBF00D318CA /* WYMutitleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMutitleTitleView.m; sourceTree = "<group>"; };
+		D3E99D9F18B6DAFA00034FB3 /* WYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBarViewController.h; sourceTree = "<group>"; };
+		D3E99DA018B6DAFA00034FB3 /* WYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarViewController.m; sourceTree = "<group>"; };
 		D3EA9B5B17AB8484007538D6 /* backButon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButon.png; sourceTree = "<group>"; };
 		D3EA9B5C17AB8484007538D6 /* backButon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButon@2x.png"; sourceTree = "<group>"; };
 		D3EA9B5D17AB8484007538D6 /* backButonPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButonPress.png; sourceTree = "<group>"; };
@@ -178,9 +186,19 @@
 			name = Math;
 			sourceTree = "<group>";
 		};
+		D37B964A18B19F7F00623499 /* 计算时间片 */ = {
+			isa = PBXGroup;
+			children = (
+				D37B964B18B19FF900623499 /* WYAlgorithmsCompare.h */,
+				D37B964C18B19FF900623499 /* WYAlgorithmsCompare.m */,
+			);
+			name = "计算时间片";
+			sourceTree = "<group>";
+		};
 		D383BA721783ECC500B05AA6 = {
 			isa = PBXGroup;
 			children = (
+				D37B964E18B1A0EC00623499 /* README.md */,
 				D3637B3317D6DBE50071D79B /* shouldBeBlogged.rtf */,
 				D383BAB51783EFA800B05AA6 /* Original Source */,
 				D383BA841783ECC500B05AA6 /* WYISOFramework */,
@@ -213,6 +231,7 @@
 		D383BA841783ECC500B05AA6 /* WYISOFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D37B964A18B19F7F00623499 /* 计算时间片 */,
 				D3B2CD94182A739B00D9F365 /* View Controller */,
 				D3B2CD92182A6E0E00D9F365 /* Color */,
 				D3A9EE0F1827DF46007662A3 /* NSURL */,
@@ -232,6 +251,7 @@
 				D383BAA71783EDD000B05AA6 /* NSString Category(md5 aes256) */,
 				D383BAA61783ED1600B05AA6 /* Login Reuse */,
 				D383BAD51783FD0600B05AA6 /* DeviceCommon.h */,
+				D3E99DA218B6DAFF00034FB3 /* Tab Bar */,
 			);
 			path = WYISOFramework;
 			sourceTree = "<group>";
@@ -351,15 +371,6 @@
 			name = HUD;
 			sourceTree = "<group>";
 		};
-		D383BAC91783F23400B05AA6 /* Image Downloader */ = {
-			isa = PBXGroup;
-			children = (
-				D383BACD1783F25B00B05AA6 /* WYImageDownloader.h */,
-				D383BACE1783F25B00B05AA6 /* WYImageDownloader.m */,
-			);
-			name = "Image Downloader";
-			sourceTree = "<group>";
-		};
 		D3A9EE0F1827DF46007662A3 /* NSURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +426,15 @@
 				D3E76D0217B3883100D318CA /* WYScrollView.m */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		D3E99DA218B6DAFF00034FB3 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D3E99D9F18B6DAFA00034FB3 /* WYTabBarViewController.h */,
+				D3E99DA018B6DAFA00034FB3 /* WYTabBarViewController.m */,
+			);
+			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		D3F8D435182CB2FC007ACBE7 /* Time And Date */ = {
@@ -489,6 +509,7 @@
 				D383BA911783ECC600B05AA6 /* Default.png in Resources */,
 				D383BA931783ECC600B05AA6 /* Default@2x.png in Resources */,
 				D383BA951783ECC600B05AA6 /* Default-568h@2x.png in Resources */,
+				D37B964F18B1A0EC00623499 /* README.md in Resources */,
 				D383BA981783ECC600B05AA6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D383BA9B1783ECC600B05AA6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D383BAD31783F2D500B05AA6 /* SVProgressHUD.bundle in Resources */,
@@ -509,6 +530,7 @@
 			files = (
 				D329FDB117CC483000A7A0CE /* WYHud.m in Sources */,
 				D38F36E817D56A4200F2748A /* UIImage+LargeImageAsyncLoad.m in Sources */,
+				D3E99DA118B6DAFA00034FB3 /* WYTabBarViewController.m in Sources */,
 				D30295E11860873900E44F2C /* NSData+Base64.m in Sources */,
 				D383BA8B1783ECC500B05AA6 /* main.m in Sources */,
 				D383BA8F1783ECC600B05AA6 /* WYAppDelegate.m in Sources */,
@@ -521,6 +543,7 @@
 				D383BAB91783F0A900B05AA6 /* WYBaseNavigationController.m in Sources */,
 				D329FDB217CC483000A7A0CE /* SVProgressHUD.m in Sources */,
 				D383BABD1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m in Sources */,
+				D37B964D18B19FF900623499 /* WYAlgorithmsCompare.m in Sources */,
 				D383BAC41783F18500B05AA6 /* WYCoreDataManager.m in Sources */,
 				D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */,
 				D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */,
