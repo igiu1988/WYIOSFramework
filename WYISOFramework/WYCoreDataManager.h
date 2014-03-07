@@ -64,3 +64,13 @@
  */
 - (BOOL)clearEntry:(NSString *)entryName;
 @end
+
+/**
+ *  这里面的方法会严格按照json里的key的名字创建
+ */
+@interface WYCoreDataManager (CreateFromJson)
+
+- (void)createManagedObject:(NSString *)classString FromDic:(NSDictionary *)dic;
+// array里是必须是NSDictionary元素
+- (void)createManagedObject:(NSString *)classString FromArray:(NSArray *)array;
+@end

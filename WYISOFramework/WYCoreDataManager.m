@@ -165,3 +165,29 @@
     }
 }
 @end
+
+@implementation WYCoreDataManager (CreateFromJson)
+
+- (void)createManagedObject:(NSString *)classString FromDic:(NSDictionary *)dic
+{
+    [self doCreateManagedObject:classString FromDic:dic];
+    [[WYCoreDataManager sharedDBManager].managedObjectContext save:nil];
+}
+
+- (void)createManagedObject:(NSString *)classString FromArray:(NSArray *)array
+{
+    for (NSDictionary *dic in array) {
+        [self doCreateManagedObject:classString FromDic:dic];
+    }
+    [[WYCoreDataManager sharedDBManager].managedObjectContext save:nil];
+}
+
+- (void)doCreateManagedObject:(NSString *)classString FromDic:(NSDictionary *)dic
+{
+    NSEntityDescription *group = [NSEntityDescription insertNewObjectForEntityForName:classString inManagedObjectContext:[WYCoreDataManager sharedDBManager].managedObjectContext];
+    for (NSString *key in dic.allKeys) {
+        [group setValue:dic[key] forKey:key];
+    }
+}
+
+@end
