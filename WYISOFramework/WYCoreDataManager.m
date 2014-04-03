@@ -31,12 +31,24 @@
     return self;
 }
 
+// TODO: 如果要改数据库存储的目录路径
+- (NSString *)DBDir
+{
+    return NSHomeDirectory();
+}
+
+// TODO: 如果要改数据库文件名
+- (NSString *)basePath
+{
+    NSString *dbName = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"] stringByAppendingPathExtension:@"sqlite"];
+    NSString *dbPath = [[self DBDir] stringByAppendingPathComponent:dbName];
+    return dbPath;
+}
+
 - (void)initCoreData
 {
     // 既然涉及数据库，肯定要有一个文件来存储数据
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = [paths objectAtIndex:0];
-    NSURL *storeUrl = [NSURL fileURLWithPath:[basePath stringByAppendingPathComponent:@"TestDB.sqlite"]];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[self basePath]];
     
     /* 初始化 managedObjectModel
      * managedObjectModel 的初始化是依据工程中的xcdatamodeld文件，
