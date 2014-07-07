@@ -68,10 +68,15 @@
     
     
     // 自定义导航栏上 title 字体，不包括后退按键上的 title 字体
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSShadowAttributeName: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-                                                           NSShadowAttributeName: [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                                           NSForegroundColorAttributeName: [UIColor colorWithRed:83.0/255 green:79.0/255 blue:78.0/255 alpha:1.0],
-                                                           NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:22.0]}];
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+    
+    // title 标题
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],
+       NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:20.0],
+       NSShadowAttributeName:shadow}];
     
     // 自定义后退按键上 title 字体，不包括导航样栏 titile 字体
     //    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];

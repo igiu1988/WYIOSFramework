@@ -31,24 +31,34 @@
     return self;
 }
 
-// TODO: 如果要改数据库存储的目录路径
-- (NSString *)DBDir
+// 数据库存储路径
++ (BOOL)DBExist
 {
-    return NSHomeDirectory();
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[WYCoreDataManager basePath]]) {
+        return YES;
+    }else{
+        return NO;
+    }
 }
 
-// TODO: 如果要改数据库文件名
-- (NSString *)basePath
+// 数据库文件名
++ (NSString *)DBDir
+{
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    return path;
+}
+
++ (NSString *)basePath
 {
     NSString *dbName = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"] stringByAppendingPathExtension:@"sqlite"];
-    NSString *dbPath = [[self DBDir] stringByAppendingPathComponent:dbName];
+    NSString *dbPath = [[WYCoreDataManager DBDir] stringByAppendingPathComponent:dbName];
     return dbPath;
 }
 
 - (void)initCoreData
 {
     // 既然涉及数据库，肯定要有一个文件来存储数据
-    NSURL *storeUrl = [NSURL fileURLWithPath:[self basePath]];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[WYCoreDataManager basePath]];
     
     /* 初始化 managedObjectModel
      * managedObjectModel 的初始化是依据工程中的xcdatamodeld文件，

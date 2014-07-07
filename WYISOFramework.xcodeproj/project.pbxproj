@@ -16,6 +16,7 @@
 		D3702A81183068DB008D9555 /* WYMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D3702A80183068DB008D9555 /* WYMath.m */; };
 		D37B964D18B19FF900623499 /* WYAlgorithmsCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = D37B964C18B19FF900623499 /* WYAlgorithmsCompare.m */; };
 		D37B964F18B1A0EC00623499 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D37B964E18B1A0EC00623499 /* README.md */; };
+		D382C668195BBEED00C5EB7A /* UIImage+CaptureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D382C667195BBEED00C5EB7A /* UIImage+CaptureImage.m */; };
 		D383BA7F1783ECC500B05AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA7E1783ECC500B05AA6 /* UIKit.framework */; };
 		D383BA811783ECC500B05AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA801783ECC500B05AA6 /* Foundation.framework */; };
 		D383BA831783ECC500B05AA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D383BA821783ECC500B05AA6 /* CoreGraphics.framework */; };
@@ -82,6 +83,8 @@
 		D37B964B18B19FF900623499 /* WYAlgorithmsCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAlgorithmsCompare.h; sourceTree = "<group>"; };
 		D37B964C18B19FF900623499 /* WYAlgorithmsCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAlgorithmsCompare.m; sourceTree = "<group>"; };
 		D37B964E18B1A0EC00623499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D382C666195BBEED00C5EB7A /* UIImage+CaptureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CaptureImage.h"; sourceTree = "<group>"; };
+		D382C667195BBEED00C5EB7A /* UIImage+CaptureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CaptureImage.m"; sourceTree = "<group>"; };
 		D383BA7B1783ECC500B05AA6 /* WYISOFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYISOFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D383BA7E1783ECC500B05AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D383BA801783ECC500B05AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -354,6 +357,8 @@
 				D383BABC1783F11C00B05AA6 /* UIImage+ResolutionIndependent.m */,
 				D38F36E617D56A4200F2748A /* UIImage+LargeImageAsyncLoad.h */,
 				D38F36E717D56A4200F2748A /* UIImage+LargeImageAsyncLoad.m */,
+				D382C666195BBEED00C5EB7A /* UIImage+CaptureImage.h */,
+				D382C667195BBEED00C5EB7A /* UIImage+CaptureImage.m */,
 			);
 			name = "UIImage Category";
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				D3ACD66F17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m in Sources */,
 				D3ACD67217B0E6A500D74640 /* UIResponder+FirstResponder.m in Sources */,
 				D3E76D0317B3883100D318CA /* WYScrollView.m in Sources */,
+				D382C668195BBEED00C5EB7A /* UIImage+CaptureImage.m in Sources */,
 				D3E76D0C17B4DDBF00D318CA /* WYMutitleTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

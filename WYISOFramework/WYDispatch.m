@@ -53,7 +53,6 @@
         NSLog(@"%zu", index);
     });
     
-    dispatch_group_
     
 }
 @end

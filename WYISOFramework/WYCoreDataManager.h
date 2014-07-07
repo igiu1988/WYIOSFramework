@@ -55,7 +55,7 @@
  @returns 如果返回NO说明未删除成功
  */
 - (BOOL)clearDB;
-
++ (BOOL)DBExist;
 
 /**
  只清空某个表中的所有记录
