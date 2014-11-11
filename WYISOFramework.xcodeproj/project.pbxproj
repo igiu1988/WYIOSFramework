@@ -46,6 +46,8 @@
 		D3A9EE121827DF74007662A3 /* WYURLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9EE111827DF74007662A3 /* WYURLObject.m */; };
 		D3ACD66F17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACD66E17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m */; };
 		D3ACD67217B0E6A500D74640 /* UIResponder+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACD67117B0E6A500D74640 /* UIResponder+FirstResponder.m */; };
+		D3AFA57F1A11BC72002599CC /* UIView+LineWithAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFA57E1A11BC72002599CC /* UIView+LineWithAutolayout.m */; };
+		D3AFA5851A11DD99002599CC /* GMSegemntView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFA5841A11DD99002599CC /* GMSegemntView.m */; };
 		D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBB1796749400E50DF9 /* WYTableViewDataSource.m */; };
 		D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDBE179675E300E50DF9 /* WYTableView.m */; };
 		D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BABDC117967C8C00E50DF9 /* WYTableViewTestControllerViewController.m */; };
@@ -132,6 +134,10 @@
 		D3ACD66E17B0DE5700D74640 /* UIViewController+ObserverKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ObserverKeyboard.m"; sourceTree = "<group>"; };
 		D3ACD67017B0E6A500D74640 /* UIResponder+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+FirstResponder.h"; path = "../UIResponder+FirstResponder.h"; sourceTree = "<group>"; };
 		D3ACD67117B0E6A500D74640 /* UIResponder+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+FirstResponder.m"; path = "../UIResponder+FirstResponder.m"; sourceTree = "<group>"; };
+		D3AFA57D1A11BC72002599CC /* UIView+LineWithAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LineWithAutolayout.h"; sourceTree = "<group>"; };
+		D3AFA57E1A11BC72002599CC /* UIView+LineWithAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LineWithAutolayout.m"; sourceTree = "<group>"; };
+		D3AFA5831A11DD99002599CC /* GMSegemntView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSegemntView.h; sourceTree = "<group>"; };
+		D3AFA5841A11DD99002599CC /* GMSegemntView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSegemntView.m; sourceTree = "<group>"; };
 		D3B2CD93182A6E8000D9F365 /* WYColorTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYColorTool.h; sourceTree = "<group>"; };
 		D3BABDBA1796749400E50DF9 /* WYTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableViewDataSource.h; sourceTree = "<group>"; };
 		D3BABDBB1796749400E50DF9 /* WYTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewDataSource.m; sourceTree = "<group>"; };
@@ -241,6 +247,8 @@
 		D383BA841783ECC500B05AA6 /* WYISOFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFA57C1A11BC66002599CC /* SegmentControl */,
+				D3AFA57B1A11BC5F002599CC /* 分隔线 */,
 				D38BEE7718C9B814005FD7B7 /* 正则表达式 */,
 				D37B964A18B19F7F00623499 /* 计算时间片 */,
 				D3B2CD94182A739B00D9F365 /* View Controller */,
@@ -403,6 +411,24 @@
 			name = NSURL;
 			sourceTree = "<group>";
 		};
+		D3AFA57B1A11BC5F002599CC /* 分隔线 */ = {
+			isa = PBXGroup;
+			children = (
+				D3AFA57D1A11BC72002599CC /* UIView+LineWithAutolayout.h */,
+				D3AFA57E1A11BC72002599CC /* UIView+LineWithAutolayout.m */,
+			);
+			name = "分隔线";
+			sourceTree = "<group>";
+		};
+		D3AFA57C1A11BC66002599CC /* SegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				D3AFA5831A11DD99002599CC /* GMSegemntView.h */,
+				D3AFA5841A11DD99002599CC /* GMSegemntView.m */,
+			);
+			name = SegmentControl;
+			sourceTree = "<group>";
+		};
 		D3B2CD92182A6E0E00D9F365 /* Color */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AFA5851A11DD99002599CC /* GMSegemntView.m in Sources */,
 				D329FDB117CC483000A7A0CE /* WYHud.m in Sources */,
 				D38BEE7E18C9B904005FD7B7 /* WYColorTool.m in Sources */,
 				D38F36E817D56A4200F2748A /* UIImage+LargeImageAsyncLoad.m in Sources */,
@@ -574,6 +601,7 @@
 				D383BAC41783F18500B05AA6 /* WYCoreDataManager.m in Sources */,
 				D3BABDBC1796749400E50DF9 /* WYTableViewDataSource.m in Sources */,
 				D3BABDBF179675E300E50DF9 /* WYTableView.m in Sources */,
+				D3AFA57F1A11BC72002599CC /* UIView+LineWithAutolayout.m in Sources */,
 				D3BABDC217967C8C00E50DF9 /* WYTableViewTestControllerViewController.m in Sources */,
 				D3571A4E17A7776D00F67E93 /* UIImage+PureColorImage.m in Sources */,
 				D3A9EE121827DF74007662A3 /* WYURLObject.m in Sources */,
